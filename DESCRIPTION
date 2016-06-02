@@ -1,0 +1,11 @@
+Package: ridgeAdap
+Title: Adaptive Ridge for variable selection
+Version: 0.3
+Date: 2016-05-31
+Author: Jean-Michel Becu
+Maintainer: Jean-Michel Becu <jean-michel.becu@hds.utc.fr>
+Depends: R (>= 2.15),quadrupen,SGL
+Description: ridgeAdap
+License: GPL
+Repository: CRAN
+Packaged: 2016-05-31 09:56:38 UTC; becu

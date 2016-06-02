@@ -1,0 +1,5 @@
+export("screening","screening.group","cleaning.lm","cleaning.ridge","ridge","ridge.permut")
+importFrom(quadrupen,elastic.net,crossval) #lasso enet de quadrupen pas encore adapte
+importFrom(SGL,SGL,cvSGL)
+
+

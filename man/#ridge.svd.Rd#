@@ -1,0 +1,70 @@
+\name{ridge.svd}
+\Rdversion{1.1}
+\alias{ridge.svd}
+\title{
+Ridge.svd}
+\description{
+Ridge.svd}
+\usage{
+ridge.svd(X,y,lambda=0,beta=rep(1,ncol(X)),group=1:ncol(X),penalty="quadrupen")
+}
+\arguments{
+ \item{X}{
+    an matrix object with n*p size
+  }
+  \item{y}{
+    an vector of size p
+  }
+  \item{lambda1}{
+    The l1 penalty to used.
+  }
+  \item{lambda2}{
+    The l2 penalty to use in case of elatic-net for screening.
+  }
+  \item{alpha}{
+    The $\alpha$ mixing parameter to use in case of sparse group
+    lasso for screening.
+  }
+  \item{beta}{
+    a vector of size p representing the weight of variable. A
+    variable with weight
+    equal to zero signify will not appear in the ordinary
+    least square
+    regression. No constraint to the number of variables
+    with a non-zero weight.
+  }
+  \item{group}{
+    a vector of size p representing the group
+    index for each
+    variables. Default is 1:ncol(X) which
+    represent the particular case
+    whit no group. Warning : variables
+    and this vector must be in
+    ascending group order.
+  }
+  \item{penalty}{
+    a string of characters to
+    determine the adaptive ridge
+    specific
+    penalty  to be used. This
+    should be one of "quadrupen"
+    or
+    "glasso" corresponding to elastic-net
+    and sparse group lasso at screening
+    respectively. By default is "quadrupen".
+  }
+}
+\value{
+An list with ridge estimates, y estimates.
+}
+\author{
+JM BECU
+}
+%\note{
+%  \code{screening} requires \code{glmnet} package.
+%}
+\examples{
+ # see ridgeAdap help
+}
+\keyword{screening}
+
