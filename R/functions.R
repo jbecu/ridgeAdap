@@ -72,7 +72,7 @@ ridge.permut<-function(X,y,lambda1=0,lambda2=0,alpha=1,beta=rep(1,ncol(X)),iter=
     }
     ## to avoid problemto invert t(X)%*%X + L we use the woodbury formula
     ## where (A+B)^-1 = A^-1 - A^-1B(I_p + A^-1B)^-1A^-1
-    Ainv <- diag(1/diag(L))
+    Ainv <- diag(as.vector(1/diag(L)))
     B <- crossprod(X)
     T <- Ainv - Ainv%*%B%*%solve(diag(1,p) + Ainv%*%B,Ainv)
 #    T <- solve(t(X)%*%X + L)
