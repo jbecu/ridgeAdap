@@ -41,7 +41,7 @@ ridge<-function(X,y,lambda1=0,lambda2=0,alpha=1,beta=rep(1,ncol(X)),group=1:ncol
     Xy<-crossprod(X,y)
 
 
-    Ainv <- diag(as.vector(1/diag(L)))
+    Ainv <- diag(1/diag(L),p,p)
     B <- XtX
     T <- Ainv - Ainv%*%B%*%solve(diag(1,p) + Ainv%*%B,Ainv)
 
